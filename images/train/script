@@ -1,0 +1,15 @@
+#!/bin/bash
+i=0
+for file in surprise/*
+do
+if [ $i -eq 3 ]
+then
+i=0
+fi
+if [ $i -eq 0 ]
+then
+mv $file ../test/surprise
+fi
+i=$((i+1))
+echo $i
+done
